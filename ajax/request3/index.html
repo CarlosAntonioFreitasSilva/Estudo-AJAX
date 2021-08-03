@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Requisição assíncrona</title>
+
+</head>
+<body>
+
+Nome: 	<input type="text" name="nome"> <br>
+		<input type="button" name="button" value="Enviar"  onclick="chamar()"> <br>
+
+<div id="texto"></div>
+
+<script>
+	function chamar(){
+
+		var nome = document.getElementsByTagName('input')[0].value;
+		
+		var httpRequest = new XMLHttpRequest;
+
+		httpRequest.onreadystatechange = function(){
+			document.getElementById('texto').innerHTML = httpRequest.responseText;
+		};
+
+		httpRequest.open("GET","http://docentes.univasf.edu.br/carlos.freitas/www/ajax/request3/request.php?nome="+nome,true);
+		httpRequest.send();
+	}
+
+
+</script>
+</body>
+</html>

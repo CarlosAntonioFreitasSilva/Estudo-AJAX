@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Requisição assíncrona</title>
+
+</head>
+<body>
+
+<input type="radio" value="opcao1" name="radio" onclick="chamar(this.value)"> Opção 1 <br>
+<input type="radio" value="opcao2" name="radio" onclick="chamar(this.value)"> Opção 2 <br>
+<input type="radio" value="opcao3" name="radio" onclick="chamar(this.value)"> Opção 3 <br>
+
+
+<div id="texto">
+
+	
+</div>
+<script>
+	function chamar(valor){
+		var httpRequest = new XMLHttpRequest;
+
+		httpRequest.onreadystatechange = function(){
+
+				document.getElementById('texto').innerHTML = httpRequest.responseText;
+			
+		};
+
+		httpRequest.open("GET","http://docentes.univasf.edu.br/carlos.freitas/www/ajax/request2/request.php?item="+valor,true);
+		httpRequest.send();
+	
+		// a função chamar passa o argumeto recebido para request.php via http com parametro item
+	}
+
+
+
+</script>
+</body>
+</html>

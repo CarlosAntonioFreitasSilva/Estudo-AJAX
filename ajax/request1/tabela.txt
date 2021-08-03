@@ -1,0 +1,5 @@
+<table>
+<tr><td> Aula 1</td><td> | <a href="http://docentes.univasf.edu.br/carlos.freitas/geometria_analitica/conteudoonline/aula01.html">Espaço Euclidiano, distância, circunferencia e esfera</a></td></tr>
+<tr><td> Aula 2</td><td> | <a href="http://docentes.univasf.edu.br/carlos.freitas/geometria_analitica/conteudoonline/aula02.html">Vetores no Espaço Euclidiano</a></td></tr>
+
+</table>

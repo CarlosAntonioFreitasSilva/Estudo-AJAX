@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Requisição síncrona</title>
+</head>
+<body>
+
+<input type="button" value="Notas de aula" onclick="consultar()">
+
+<div id="tabela">
+	
+</div>
+<script>
+	function consultar(){
+		var req = new XMLHttpRequest;
+
+		req.open('GET','http://docentes.univasf.edu.br/carlos.freitas/www/ajax/request1/tabela.txt', false);
+		req.send();
+
+		document.getElementById('tabela').innerHTML = req.responseText+'<input type="button" value="Fechar" onclick="fechar()">';
+	}
+
+	function fechar(){
+		document.getElementById('tabela').innerHTML = "";
+	}
+
+</script>
+</body>
+</html>
